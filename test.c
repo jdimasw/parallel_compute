@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
     val = hum_val;
   }
 
-  printf("%d \n%d\n", count, val);
+  printf("%d \n%s\n", count, val);
 
   fclose(fp);
   return 0;
