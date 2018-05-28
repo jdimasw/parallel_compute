@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
   }
 
   int count = 0;
-  int val = 0;
+  char val = 0;
 
   while (fgets(buf, sizeof(buf), fp) != NULL)
   {
@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
     json_object *obj_hum = json_object_object_get(jobj,"humidity");
 
     const char *hum_val = json_object_get_string(obj_hum);
-    val = hum_val - '0';
+    val = hum_val;
   }
 
   printf("%d \n%d\n", count, val);
