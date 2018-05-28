@@ -32,8 +32,8 @@ int main(int argc, char *argv[])
     json_object *jobj = json_tokener_parse(buf);
     json_object *obj_hum = json_object_object_get(jobj,"humidity");
 
-    const int *hum_val = int(json_object_get_string(obj_hum));
-    val = hum_val;
+    const char *hum_val = json_object_get_string(obj_hum);
+    val = hum_val - '0';
   }
 
   printf("%d \n%d\n", count, val);
